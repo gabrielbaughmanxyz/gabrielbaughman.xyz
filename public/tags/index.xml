@@ -8,12 +8,11 @@
       <url>https://gabrielbaughman.xyz/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://gabrielbaughman.xyz/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 30 Oct 2021 12:28:16 -0500</lastBuildDate><atom:link href="https://gabrielbaughman.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://gabrielbaughman.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Guides</title>
       <link>https://gabrielbaughman.xyz/tags/guides/</link>
-      <pubDate>Sat, 30 Oct 2021 12:28:16 -0500</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://gabrielbaughman.xyz/tags/guides/</guid>
       <description></description>
@@ -22,9 +21,18 @@
     <item>
       <title>Tech</title>
       <link>https://gabrielbaughman.xyz/tags/tech/</link>
-      <pubDate>Sat, 30 Oct 2021 12:28:16 -0500</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://gabrielbaughman.xyz/tags/tech/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Website</title>
+      <link>https://gabrielbaughman.xyz/tags/website/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gabrielbaughman.xyz/tags/website/</guid>
       <description></description>
     </item>
     
