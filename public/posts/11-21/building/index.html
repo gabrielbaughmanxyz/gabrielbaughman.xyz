@@ -31,7 +31,7 @@
 <meta name=twitter:title content="Building gabrielbaughman.xyz">
 <meta name=twitter:description content="This is how I went about creating gabrielbaughman.xyz and how you can do the same.">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":2,"name":"Posts","item":"https://gabrielbaughman.xyz/posts/"},{"@type":"ListItem","position":3,"name":"Building gabrielbaughman.xyz","item":"https://gabrielbaughman.xyz/posts/11-21/building/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Building gabrielbaughman.xyz","name":"Building gabrielbaughman.xyz","description":"This is how I went about creating gabrielbaughman.xyz and how you can do the same.","keywords":["Guides","Tech","Website"],"articleBody":"Why should you care? Well, having a website is cool and awesome.\nGetting Started There are a lot of different ways you can create a website, but the way I did it is probably cheaper and more hands on. So, if this isn’t what you are looking for then I suggest you look elsewere.\nHere is what required to run a site:\n Domain name Server or hardware to host on Software to run the site Creating the site  1. Domain Name Some of you might not know what a domain name is, so I will explain it briefly. A domain name is an alphabetic string that references an actual IP address. e.g example.com - 192.123.456.789\nI use Epik to register mine, however there are other registers you can use.\n2. Hosting Once you have obtained your desired domain name you are going to want to have a place to host your site. You can either use a VPS provider to host on, or use your own hardware and internet. Both have their benefits and downsides, but VPS hosting takes the responsibility of having hardware and good internet away so that is the one I chose.\nFor my provider I went with Vultr (My referral code gives you $100 and me $35 credit, which helps me keep posting) and chose the the bare minimum instance which is all you really need to host a basic site.\nFrom there click “Deploy New Server” For hosting a website the cheapest option is more than enough. So choose:\n Cloud Compute Location Operating System (It chooses Debain by default which is what I run and perfectly suited for this task) Make sure IPv6 is enabled. Then you deploy.  It will take just a few moments before the server is up and running.\n3. Software When your instantance is up you will want to get it’s IP address and head over to your domain register. Mine is Epik, so I will head over there.\nClick the hamber menu next to your domain and in the DNS \u0026 WHOIS tab click SET DNS HOST RECORDS. Once in there click the EXTERNAL HOSTS tab and clear any premade records and make three records for IPv4 and IPv6. in the Host box for IPv4 and IPv6 have one with nothing, www, and *. In the points to tab for the IPv4 record put the IPv4 address Vultr gives you, and the same for IPv6. Head back to Vultr and in the IPv6 settings add a Reverse DNS with your IPv6 address and your domain name. Now you will want to connect to your instantance either through Vultr’s console interface, or use an SSH client to connect to it (windows has it built into CMD but you can use PuTTY). To connect over SSH, in your client put in your IPv4 address and the port is by default 22. The username and password is root with Vultr’s generated password.\nOnce in you will want to update the system, so run (if logged in as root and on Debain or Ubuntu):\napt update \u0026\u0026 apt upgrade\nThe web server that is mainly used now is nginx, and is what I use as well. Altough, you could look into alternitives like Apache. So, you want to make sure nginx is installed:\napt install nginx\n4. Creating the Site You will want to navigate to /etc/nginx From here we want want to create a site that nginx will load.\nYou will want to type:\ncp sites-available/default sites-available/\nNginx has a premade template for configuring sites to load. The command we just ran will allow us to create our site based off of this template. Now we will want to edit our copy of the template. Debain has nano and vim installed by default, but for this example I am going to use nano.\nType:\nnano sites-available/ Now in this file:\n Remove the two lines that have listen. They will be replaced later. root is the location of your website’s files. You can set this to whatever you want, but in this guide you will replace /var/www/html to /var/www/. server_name is the name of your site. Replace server_name _; to server_name yoursitename.com www.yoursitename.com ; location is the location of the page that will be displayed if someone navigates to a page on your site that does not exist. You can leave this as default or have your own custom one.  Since we want this site to be ran you will need to run this command:\nln -s sites-available/ sites-enabled/\nThis creates a symbolic link to the sites-enabled folder which tells nginx to run the site configuration.\nIf you wrote a folder location that doesn’t exist you will want to create it. In my example the folder location is /var/www/ In this case,\nType:\nmkdir /var/www/\nTo make sure our site is secure will want to enable https on our site. This is important because it can make a site more legit and search engines like Google will more likely display a secured website.\nThe tool we are going to use to do this is Certbot. To install Type:\napt install python3-certbot-nginx\nAfter installing certbot run:\ncertbot --nginx\nGo through the setup by selecting all names to activate https. If everything works it should do tests on the domain names and enable it.\nWhat Now? Well, you can completely write your website from scratch or use a framework to build your site. In my case I am using Hugo to make my site. It allows me to write posts in simple Markdown files with ease, and they have plenty of nice themes to choose from.\nWhat’s Next This is my first post, but I plan to whenever I can write and add to this site.\n","wordCount":"960","inLanguage":"en","image":"https://gabrielbaughman.xyz/posts/11-21/building/images/building-cover.jpg","datePublished":"0001-01-01T00:00:00Z","dateModified":"0001-01-01T00:00:00Z","author":{"@type":"Person","name":"Gabriel"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://gabrielbaughman.xyz/posts/11-21/building/"},"publisher":{"@type":"Organization","name":"gabrielbaughman.xyz","logo":{"@type":"ImageObject","url":"https://gabrielbaughman.xyz/%3Clink%20/%20abs%20url%3E"}}}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Building gabrielbaughman.xyz","name":"Building gabrielbaughman.xyz","description":"This is how I went about creating gabrielbaughman.xyz and how you can do the same.","keywords":["Guides","Tech","Website"],"articleBody":"Why Should You Have A Website? Well, having a website is cool and awesome. However, having your own platform to speak and present on is what the internet was all about when the .com explosion happened. In the present it seems there are a few sites that all the speaking is done on, which is making the internet more centralized. Having your own place makes you independent of these few sites.\nGetting Started There are a lot of different ways you can create a website, but the way I did it is probably cheaper and more hands on. So, if this isn’t what you are looking for then I suggest you look elsewere.\nHere is what required to run a site:\n Domain name Server or hardware to host on Software to run the site Creating the site  1. Domain Name Some of you might not know what a domain name is, so I will explain it briefly. A domain name is an alphabetic string that references an actual IP address. e.g example.com - 192.123.456.789\nI use Epik to register mine, however there are other registers you can use.\n2. Hosting Once you have obtained your desired domain name you are going to want to have a place to host your site. You can either use a VPS provider to host on, or use your own hardware and internet. Both have their benefits and downsides, but VPS hosting takes the responsibility of having hardware and good internet away so that is the one I went with.\nFor my provider I went with Vultr (My referral code gives you $100 and me $35 credit, which helps me keep posting). For VPS hosting the bare minimum instance available is all you really need to host a basic site and services.\nIf you are on Vultr click “Deploy New Server” For hosting a website the cheapest option is more than enough. So choose:\n Cloud Compute Location Operating System (It chooses Debain by default) Make sure IPv6 is enabled. Then you deploy.  It will take just a few moments before the server is up and running.\nGetting Up and Running 1. Software When your instantance is up you will want to get it’s IP address and head over to your domain register. Mine is Epik, so I will head over there.\nClick the hamber menu next to your domain and in the DNS \u0026 WHOIS tab click SET DNS HOST RECORDS. Once in there click the EXTERNAL HOSTS tab and clear any premade records. Make three records for IPv4 and IPv6. in the Host box for IPv4 and IPv6 have one with nothing, www, and *. In the points to tab for the IPv4 record put the IPv4 address Vultr gives you, and the same for IPv6. Head back to Vultr or your provider and in the IPv6 settings add a Reverse DNS with your IPv6 address and your domain name. Now you will want to connect to your instantance either through Vultr’s console interface, or use an SSH client to connect to it (windows has it built into CMD but you can use PuTTY). To connect over SSH, in your client put in your IPv4 address and the port is by default 22. The username and password is root with Vultr’s generated password.\nOnce in you will want to update the system, so run (if logged in as root and on Debain or Ubuntu):\napt update \u0026\u0026 apt upgrade\nThe web server that is mainly used now is nginx, and is what I use as well. Altough, you could look into alternitives like Apache. So, you want to make sure nginx is installed:\napt install nginx\n2. Creating the Site You will want to navigate to /etc/nginx From here we want want to create a site that nginx will load.\nYou will want to type:\ncp sites-available/default sites-available/\nNginx has a premade template for configuring sites to load. The command we just ran will allow us to create our site based off of this template. Now we will want to edit our copy of the template. Debain has nano and vim installed by default, but for this example I am going to use nano.\nType:\nnano sites-available/ Now in this file:\n Remove the two lines that have listen. They will be replaced later. root is the location of your website’s files. You can set this to whatever you want, but in this guide you will replace /var/www/html to /var/www/. server_name is the name of your site. Replace server_name _; to server_name yoursitename.com www.yoursitename.com ; location is the location of the page that will be displayed if someone navigates to a page on your site that does not exist. You can leave this as default or have your own custom one.  Since we want this site to be ran you will need to run this command:\nln -s sites-available/ sites-enabled/\nThis creates a symbolic link to the sites-enabled folder which tells nginx to run the site configuration.\nIf you wrote a folder location that doesn’t exist you will want to create it. In my example the folder location is /var/www/ In this case,\nType:\nmkdir /var/www/\nTo make sure our site is secure will want to enable https on our site. This is important because it can make a site more legit and search engines like Google will more likely display a secured website.\nThe tool we are going to use to do this is Certbot. To install Type:\napt install python3-certbot-nginx\nAfter installing certbot run:\ncertbot --nginx\nGo through the setup by selecting all names to activate https. If everything works it should do tests on the domain names and enable it.\nWhat Now? Well, you can completely write your website from scratch or use a framework to build your site. In my case I am using Hugo to make my site. It allows me to write posts in simple Markdown files with ease, and they have plenty of nice themes to choose from.\nWhat’s Next This is my first post, but I plan to whenever I can write and add to this site.\n","wordCount":"1020","inLanguage":"en","image":"https://gabrielbaughman.xyz/posts/11-21/building/images/building-cover.jpg","datePublished":"0001-01-01T00:00:00Z","dateModified":"0001-01-01T00:00:00Z","author":{"@type":"Person","name":"Gabriel"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://gabrielbaughman.xyz/posts/11-21/building/"},"publisher":{"@type":"Organization","name":"gabrielbaughman.xyz","logo":{"@type":"ImageObject","url":"https://gabrielbaughman.xyz/%3Clink%20/%20abs%20url%3E"}}}</script>
 </head>
 <body class=dark id=top>
 <script>localStorage.getItem("pref-theme")==="light"&&document.body.classList.remove('dark')</script>
@@ -83,9 +83,39 @@ This is how I went about creating gabrielbaughman.xyz and how you can do the sam
 </header>
 <figure class=entry-cover><img loading=lazy src=https://gabrielbaughman.xyz/images/building-cover.jpg alt="abstract cover image">
 <p>Photographer - Anni Roenkae</p>
-</figure>
-<div class=post-content><h2 id=why-should-you-care>Why should you care?<a hidden class=anchor aria-hidden=true href=#why-should-you-care>#</a></h2>
-<p>Well, having a website is cool and awesome.</p>
+</figure><div class=toc>
+<details open>
+<summary accesskey=c title="(Alt + C)">
+<span class=details>Table of Contents</span>
+</summary>
+<div class=inner><ul><ul>
+<li>
+<a href=#why-should-you-have-a-website aria-label="Why Should You Have A Website?">Why Should You Have A Website?</a></li></ul>
+<li>
+<a href=#getting-started aria-label="Getting Started">Getting Started</a><ul>
+<li>
+<a href=#1-domain-name aria-label="1. Domain Name">1. Domain Name</a></li>
+<li>
+<a href=#2-hosting aria-label="2. Hosting">2. Hosting</a></li></ul>
+</li>
+<li>
+<a href=#getting-up-and-running aria-label="Getting Up and Running">Getting Up and Running</a><ul>
+<li>
+<a href=#1-software aria-label="1. Software">1. Software</a></li>
+<li>
+<a href=#2-creating-the-site aria-label="2. Creating the Site">2. Creating the Site</a></li></ul>
+</li>
+<li>
+<a href=#what-now aria-label="What Now?">What Now?</a></li>
+<li>
+<a href=#whats-next aria-label="What&amp;rsquo;s Next">What&rsquo;s Next</a>
+</li>
+</ul>
+</div>
+</details>
+</div>
+<div class=post-content><h2 id=why-should-you-have-a-website>Why Should You Have A Website?<a hidden class=anchor aria-hidden=true href=#why-should-you-have-a-website>#</a></h2>
+<p>Well, having a website is cool and awesome. However, having your <em><strong>own</strong></em> platform to speak and present on is what the internet was all about when the .com explosion happened. In the present it seems there are a few sites that all the speaking is done on, which is making the internet more centralized. Having your own place makes you independent of these few sites.</p>
 <h1 id=getting-started>Getting Started<a hidden class=anchor aria-hidden=true href=#getting-started>#</a></h1>
 <p>There are a lot of different ways you can create a website, but the way I did it is probably cheaper and more hands on. So, if this isn&rsquo;t what you are looking for then I suggest you look elsewere.</p>
 <p>Here is what required to run a site:</p>
@@ -101,30 +131,31 @@ A domain name is an alphabetic string that references an actual IP address. e.g 
 <p>I use <a href=https://www.epik.com>Epik</a> to register mine, however there are other registers you can use.</p>
 <h2 id=2-hosting>2. Hosting<a hidden class=anchor aria-hidden=true href=#2-hosting>#</a></h2>
 <p>Once you have obtained your desired domain name you are going to want to have a place to host your site.
-You can either use a VPS provider to host on, or use your own hardware and internet. Both have their benefits and downsides, but VPS hosting takes the responsibility of having hardware and good internet away so that is the one I chose.</p>
-<p>For my provider I went with <a href="https://www.vultr.com/?ref=8966022-8H">Vultr</a> (My referral code gives you $100 and me $35 credit, which helps me keep posting) and chose the the bare minimum instance which is all you really need to host a basic site.</p>
-<p>From there click <strong>&ldquo;Deploy New Server&rdquo;</strong>
+You can either use a VPS provider to host on, or use your own hardware and internet. Both have their benefits and downsides, but VPS hosting takes the responsibility of having hardware and good internet away so that is the one I went with.</p>
+<p>For my provider I went with <a href="https://www.vultr.com/?ref=8966022-8H">Vultr</a> (My referral code gives you $100 and me $35 credit, which helps me keep posting). For VPS hosting the bare minimum instance available is all you really need to host a basic site and services.</p>
+<p>If you are on Vultr click <strong>&ldquo;Deploy New Server&rdquo;</strong>
 <img loading=lazy src=../images/VultrDeploy.png alt=vultr-deploy>
 </p>
 <p>For hosting a website the cheapest option is more than enough. So choose:</p>
 <ol>
 <li><strong>Cloud Compute</strong></li>
 <li>Location</li>
-<li>Operating System (It chooses Debain by default which is what I run and perfectly suited for this task)</li>
+<li>Operating System (It chooses Debain by default)</li>
 <li>Make sure IPv6 is enabled.
 <img loading=lazy src=../images/vultr-specs.png alt=vutlr-specs>
 Then you deploy.</li>
 </ol>
 <p>It will take just a few moments before the server is up and running.</p>
-<h2 id=3-software>3. Software<a hidden class=anchor aria-hidden=true href=#3-software>#</a></h2>
+<h1 id=getting-up-and-running>Getting Up and Running<a hidden class=anchor aria-hidden=true href=#getting-up-and-running>#</a></h1>
+<h2 id=1-software>1. Software<a hidden class=anchor aria-hidden=true href=#1-software>#</a></h2>
 <p>When your instantance is up you will want to get it&rsquo;s IP address and head over to your domain register. Mine is Epik, so I will head over there.</p>
 <p>Click the hamber menu next to your domain and in the <strong>DNS & WHOIS</strong> tab click <strong>SET DNS HOST RECORDS</strong>.
 <img loading=lazy src=../images/epik-menu.png alt=epik-menu>
 </p>
-<p>Once in there click the <strong>EXTERNAL HOSTS</strong> tab and clear any premade records and make three records for IPv4 and IPv6. in the <strong>Host</strong> box for IPv4 and IPv6 have one with nothing, <em>www</em>, and *. In the points to tab for the IPv4 record put the IPv4 address Vultr gives you, and the same for IPv6.
+<p>Once in there click the <strong>EXTERNAL HOSTS</strong> tab and clear any premade records. <strong>Make</strong> three records for IPv4 and IPv6. in the <strong>Host</strong> box for IPv4 and IPv6 have one with nothing, <em>www</em>, and *. In the points to tab for the IPv4 record put the IPv4 address Vultr gives you, and the same for IPv6.
 <img loading=lazy src=../images/epik-records.png alt=epik-records>
 </p>
-<p>Head back to Vultr and in the IPv6 settings add a <strong>Reverse DNS</strong> with your IPv6 address and your domain name.
+<p>Head back to Vultr or your provider and in the IPv6 settings add a <strong>Reverse DNS</strong> with your IPv6 address and your domain name.
 <img loading=lazy src=../images/vultr-reversedns.png alt=vultr-reversedns>
 </p>
 <p>Now you will want to connect to your instantance either through Vultr&rsquo;s console interface, or use an <strong>SSH</strong> client to connect to it (windows has it built into CMD but you can use <a href=https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>PuTTY</a>). To connect over SSH, in your client put in your IPv4 address and the port is by default 22. The username and password is <code>root</code> with Vultr&rsquo;s generated password.</p>
@@ -133,7 +164,7 @@ Then you deploy.</li>
 <p>The web server that is mainly used now is <a href=https://nginx.org/en/>nginx</a>, and is what I use as well. Altough, you could look into alternitives like <a href=http://www.apache.org/>Apache</a>.
 So, you want to make sure <code>nginx</code> is installed:</p>
 <p><code>apt install nginx</code></p>
-<h2 id=4-creating-the-site>4. Creating the Site<a hidden class=anchor aria-hidden=true href=#4-creating-the-site>#</a></h2>
+<h2 id=2-creating-the-site>2. Creating the Site<a hidden class=anchor aria-hidden=true href=#2-creating-the-site>#</a></h2>
 <p>You will want to navigate to <code>/etc/nginx</code>
 <img loading=lazy src=../images/nginx-folders.png alt=nginx-folders>
 From here we want want to create a site that nginx will load.</p>
@@ -167,9 +198,9 @@ To install <strong>Type:</strong></p>
 <p>After installing certbot <strong>run:</strong></p>
 <p><code>certbot --nginx</code></p>
 <p>Go through the setup by selecting all names to activate <code>https</code>. If everything works it should do tests on the domain names and enable it.</p>
-<h2 id=what-now>What Now?<a hidden class=anchor aria-hidden=true href=#what-now>#</a></h2>
-<p>Well, you can completely write your website from scratch or use a framework to build your site. In my case I am using <a href=gohugo.io/>Hugo</a> to make my site. It allows me to write posts in simple Markdown files with ease, and they have plenty of nice themes to choose from.</p>
-<h2 id=whats-next>What&rsquo;s Next<a hidden class=anchor aria-hidden=true href=#whats-next>#</a></h2>
+<h1 id=what-now>What Now?<a hidden class=anchor aria-hidden=true href=#what-now>#</a></h1>
+<p>Well, you can completely write your website from scratch or use a framework to build your site. In my case I am using <a href=https://www.gohugo.io/>Hugo</a> to make my site. It allows me to write posts in simple Markdown files with ease, and they have plenty of nice themes to choose from.</p>
+<h1 id=whats-next>What&rsquo;s Next<a hidden class=anchor aria-hidden=true href=#whats-next>#</a></h1>
 <p>This is my first post, but I plan to whenever I can write and add to this site.</p>
 </div>
 <footer class=post-footer>
