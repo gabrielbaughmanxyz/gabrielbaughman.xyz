@@ -5,6 +5,8 @@ author: "Gabriel"
 description: "This is how I went about creating gabrielbaughman.xyz and how you can do the same."
 tags: ["Guides", "Tech", "Website"]
 ShowReadingTime: true
+ShowToc: true
+TocOpen: true
 cover:
     image: "images/building-cover.jpg" # image path/url
     alt: "abstract cover image" # alt text
@@ -13,8 +15,8 @@ cover:
     hidden: false # only hide on current single page
 draft: false
 ---
-## Why should you care?
-Well, having a website is cool and awesome.
+## Why Should You Have A Website?
+Well, having a website is cool and awesome. However, having your ***own*** platform to speak and present on is what the internet was all about when the .com explosion happened. In the present it seems there are a few sites that all the speaking is done on, which is making the internet more centralized. Having your own place makes you independent of these few sites.
 
 # Getting Started
 There are a lot of different ways you can create a website, but the way I did it is probably cheaper and more hands on. So, if this isn't what you are looking for then I suggest you look elsewere.
@@ -33,33 +35,35 @@ I use [Epik](https://www.epik.com) to register mine, however there are other reg
 
 ## 2. Hosting
 Once you have obtained your desired domain name you are going to want to have a place to host your site.
-You can either use a VPS provider to host on, or use your own hardware and internet. Both have their benefits and downsides, but VPS hosting takes the responsibility of having hardware and good internet away so that is the one I chose. 
+You can either use a VPS provider to host on, or use your own hardware and internet. Both have their benefits and downsides, but VPS hosting takes the responsibility of having hardware and good internet away so that is the one I went with. 
 
-For my provider I went with [Vultr](https://www.vultr.com/?ref=8966022-8H) (My referral code gives you $100 and me $35 credit, which helps me keep posting) and chose the the bare minimum instance which is all you really need to host a basic site.
+For my provider I went with [Vultr](https://www.vultr.com/?ref=8966022-8H) (My referral code gives you $100 and me $35 credit, which helps me keep posting). For VPS hosting the bare minimum instance available is all you really need to host a basic site and services.
 
-From there click **"Deploy New Server"**
+If you are on Vultr click **"Deploy New Server"**
  ![vultr-deploy](../images/VultrDeploy.png)
  
 For hosting a website the cheapest option is more than enough. So choose:   
 1. **Cloud Compute**
 2. Location
-3. Operating System (It chooses Debain by default which is what I run and perfectly suited for this task)
+3. Operating System (It chooses Debain by default)
 4. Make sure IPv6 is enabled.
 ![vutlr-specs](../images/vultr-specs.png)
 Then you deploy.
 
 It will take just a few moments before the server is up and running.
 
-## 3. Software
+# Getting Up and Running
+
+## 1. Software
 When your instantance is up you will want to get it's IP address and head over to your domain register. Mine is Epik, so I will head over there.
 
 Click the hamber menu next to your domain and in the **DNS & WHOIS** tab click **SET DNS HOST RECORDS**.
 ![epik-menu](../images/epik-menu.png)
 
-Once in there click the **EXTERNAL HOSTS** tab and clear any premade records and make three records for IPv4 and IPv6. in the **Host** box for IPv4 and IPv6 have one with nothing, *www*, and *. In the points to tab for the IPv4 record put the IPv4 address Vultr gives you, and the same for IPv6.
+Once in there click the **EXTERNAL HOSTS** tab and clear any premade records. **Make** three records for IPv4 and IPv6. in the **Host** box for IPv4 and IPv6 have one with nothing, *www*, and *. In the points to tab for the IPv4 record put the IPv4 address Vultr gives you, and the same for IPv6.
 ![epik-records](../images/epik-records.png)
 
-Head back to Vultr and in the IPv6 settings add a **Reverse DNS** with your IPv6 address and your domain name.
+Head back to Vultr or your provider and in the IPv6 settings add a **Reverse DNS** with your IPv6 address and your domain name.
 ![vultr-reversedns](../images/vultr-reversedns.png)
 
 Now you will want to connect to your instantance either through Vultr's console interface, or use an **SSH** client to connect to it (windows has it built into CMD but you can use [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)). To connect over SSH, in your client put in your IPv4 address and the port is by default 22. The username and password is `root` with Vultr's generated password.
@@ -73,7 +77,7 @@ So, you want to make sure `nginx` is installed:
 
 `apt install nginx`
 
-## 4. Creating the Site
+## 2. Creating the Site
 You will want to navigate to `/etc/nginx`
 ![nginx-folders](../images/nginx-folders.png)
 From here we want want to create a site that nginx will load.
@@ -123,8 +127,8 @@ After installing certbot **run:**
 
 Go through the setup by selecting all names to activate `https`. If everything works it should do tests on the domain names and enable it.
 
-## What Now?
-Well, you can completely write your website from scratch or use a framework to build your site. In my case I am using [Hugo](gohugo.io/) to make my site. It allows me to write posts in simple Markdown files with ease, and they have plenty of nice themes to choose from.
+# What Now?
+Well, you can completely write your website from scratch or use a framework to build your site. In my case I am using [Hugo](https://www.gohugo.io/) to make my site. It allows me to write posts in simple Markdown files with ease, and they have plenty of nice themes to choose from.
 
-## What's Next
+# What's Next
 This is my first post, but I plan to whenever I can write and add to this site.
