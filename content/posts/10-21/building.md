@@ -58,9 +58,19 @@ Once in there click the **EXTERNAL HOSTS** tab and clear any premade records and
 Head back to Vultr and in the IPv6 settings add a **Reverse DNS** with your IPv6 address and your domain name.
 ![vultr-reversedns](../images/vultr-reversedns.png)
 
-Now you will want to connect to your instantance either through Vultr's console interface, or use an **SSH** client to connect to it (windows has it built into CMD but you can use [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)). To connect over SSH, in your client put in your IPv4 address and the port is by default 22. The username and password is root with Vultr's generated password.
+Now you will want to connect to your instantance either through Vultr's console interface, or use an **SSH** client to connect to it (windows has it built into CMD but you can use [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)). To connect over SSH, in your client put in your IPv4 address and the port is by default 22. The username and password is `root` with Vultr's generated password.
 
 Once in you will want to update the system, so run (if logged in as root and on Debain or Ubuntu):
 
 `apt update && apt upgrade`
 
+The web server that is mainly used now is [nginx](https://nginx.org/en/), and is what I use as well. 
+So, you want to make sure `nginx` is installed:
+
+`apt install nginx`
+
+## 4. Creating the Site
+You will want to navigate to `/etc/nginx`
+From here we want want to create a site that nginx will load.
+You will want to type `cp sites-available/default sites-available/sitename`
+![nginx-] 
