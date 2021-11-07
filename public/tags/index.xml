@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on gabrielbaughman.xyz</title>
+    <link>https://gabrielbaughman.xyz/tags/</link>
+    <description>Recent content in Tags on gabrielbaughman.xyz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 30 Oct 2021 12:28:16 -0500</lastBuildDate><atom:link href="https://gabrielbaughman.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Guides</title>
+      <link>https://gabrielbaughman.xyz/tags/guides/</link>
+      <pubDate>Sat, 30 Oct 2021 12:28:16 -0500</pubDate>
+      
+      <guid>https://gabrielbaughman.xyz/tags/guides/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tech</title>
+      <link>https://gabrielbaughman.xyz/tags/tech/</link>
+      <pubDate>Sat, 30 Oct 2021 12:28:16 -0500</pubDate>
+      
+      <guid>https://gabrielbaughman.xyz/tags/tech/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

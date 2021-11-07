@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Guides on gabrielbaughman.xyz</title>
+    <link>https://gabrielbaughman.xyz/tags/guides/</link>
+    <description>Recent content in Guides on gabrielbaughman.xyz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 30 Oct 2021 12:28:16 -0500</lastBuildDate><atom:link href="https://gabrielbaughman.xyz/tags/guides/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building gabrielbaughman.xyz</title>
+      <link>https://gabrielbaughman.xyz/posts/10-21/building/</link>
+      <pubDate>Sat, 30 Oct 2021 12:28:16 -0500</pubDate>
+      
+      <guid>https://gabrielbaughman.xyz/posts/10-21/building/</guid>
+      <description>Why should you care? Well, having a website is cool and awesome.
+Getting Started There are a lot of different ways you can create a website, but the way I did it is probably cheaper and more hands on. So, if this isn&amp;rsquo;t what you are looking for then I suggest you look elsewere.
+Here is what required to run a site:
+ Domain name Server or hardware to host on Software to run the site Creating the site  1.</description>
+    </item>
+    
+  </channel>
+</rss>
