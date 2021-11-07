@@ -55,12 +55,12 @@ params:
 
   # profile-mode
   profileMode:
-    enabled: false # needs to be explicitly set
+    enabled: true # needs to be explicitly set
     title: gabrielbaughman.xyz
-    subtitle: "Welocome to my site"
-    imageUrl: "<img location>"
-    imageWidth: 120
-    imageHeight: 120
+    subtitle: "Welcome to my site. I make posts about anything I find worth, or needs talking about."
+    imageUrl: "../images/pfp.jpg"
+    imageWidth: 360
+    imageHeight: 360
     imageTitle: my image
     buttons:
       - name: Posts
@@ -71,15 +71,15 @@ params:
   # home-info mode
   homeInfoParams:
     Title: "Home Of gabrielbaughman.xyz"
-    Content: "Money, Privacy, Tech, and More"
+    Content: "I make posts about anything I find worth, or needs talking about."
 
   socialIcons:
 #    - name: twitter
 #      url: "https://twitter.com/"
 #    - name: stackoverflow
 #      url: "https://stackoverflow.com"
-#    - name: github
-#      url: "https://github.com/"
+    - name: github
+      url: "https://github.com/gabrielbaughmanxyz"
     - name: email
       url: "mailto:gabriel@gabrielbaughman.xyz"
 
@@ -97,7 +97,7 @@ params:
     hiddenInSingle: false # hide on single page
 
   editPost:
-    URL: "https://github.com/<path_to_repo>/content"
+    URL: "https://github.com/gabrielbaughmanxyz/gabrielbaughman.xyz/tree/master/content"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 
