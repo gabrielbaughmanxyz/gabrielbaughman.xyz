@@ -10,6 +10,18 @@
     </image>
     <generator>Hugo -- gohugo.io</generator><atom:link href="https://gabrielbaughman.xyz/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>About</title>
+      <link>https://gabrielbaughman.xyz/about/</link>
+      <pubDate>Sun, 07 Nov 2021 19:03:01 -0600</pubDate>
+      
+      <guid>https://gabrielbaughman.xyz/about/</guid>
+      <description>Photo by Axel Grollemund
+Who Am I? I am Gabriel Baughman of course. While true I am also someone who likes to write about a lot of topics. These topics can vary from technology to politics to guides, to online privacy.
+You can reach me via email, and find me on github.
+I plan to write whenever I can because there are things I believe that should be known and I will make sure they are.</description>
+    </item>
+    
+    <item>
       <title>Building gabrielbaughman.xyz</title>
       <link>https://gabrielbaughman.xyz/posts/11-21/building/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
