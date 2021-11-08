@@ -2,7 +2,7 @@
 title: "About"
 date: 2021-11-07T19:03:01-06:00
 author: "Gabriel"
-draft: true
+draft: false
 ---
 ![rome-sculpters](../images/aboutme-cover.jpg)
 Photo by Axel Grollemund
