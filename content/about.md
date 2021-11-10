@@ -7,12 +7,11 @@ draft: false
 ![rome-sculpters](../images/aboutme-cover.jpg)
 Photo by Axel Grollemund
 # Purpose
-I like to write about a lot of topics. These topics can vary from technology to politics to guides, to online privacy. I don't know if many people will see what I write, but I am not writing hoping to get lots of views, likes, or shares on social media.
+I want to write regarding various subjects, but I wanted to have my own platform to articulate on. So, after considering the options that lay before me, I started my own site.
 
-You can reach me via [email](mailto:gabriel@gabrielbaughman.xyz), and find me on [github](https://github.com/gabrielbaughmanxyz/).
-
-I plan to write whenever I can however, I have life that is busy so the times I post will vary.
+I don't know if many people will see what I write, but I am not doing this hoping to become renowned in writing.
 
 # Values
-I have some beliefs about online privacy and rights, along with individual rights.
-There will not be any trackers, invasive anayltics, nor any advertisements on my site. I will not beg for donations, but I greatly appreciate them.
+I have a passionate belief in online privacy. There will not be any advertisements, trackers, or invasive analytics on my site. 
+
+I do not require donations, but I will be grateful to any that comes my way.
