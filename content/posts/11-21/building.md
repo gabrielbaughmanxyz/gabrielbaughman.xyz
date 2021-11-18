@@ -1,6 +1,6 @@
 ---
 title: "Building gabrielbaughman.xyz"
-date: 2021-11-7T12:28:16-05:00
+date: 2021-11-07T12:28:16-05:00
 author: "Gabriel"
 description: "This is how I went about creating gabrielbaughman.xyz and how you can do the same."
 tags: ["Guides", "Tech", "Website"]
