@@ -17,7 +17,9 @@ draft: false
 ---
 > “Arguing that you don't care about the **right to privacy** because you have nothing to hide is no different than saying you don't care about free speech because you have nothing to say.” – Edward Snowden.
 
-People believe that online privacy doesn’t matter, unless you have something immoral to hide. This is called [Nothing To Hide Argument](https://en.wikipedia.org/wiki/Nothing_to_hide_argument). However, **you do** have something to hide, your digital life is becoming more and more important every day. So why should you allow people to openly, and knowingly allow to violate your online privacy? Microsoft, Google, Meta, Twitter, and all of the organizations out there do not care about your best interest. They want to make money out of you, because you are the product. Not only are you profited off, but big companies that have vast influence want to put you in a [Filter Bubble](https://spreadprivacy.com/filter-bubble/), which is a very dangerous practice.
+People believe that online privacy doesn’t matter, unless you have something immoral to hide. This is called [Nothing To Hide Argument](https://en.wikipedia.org/wiki/Nothing_to_hide_argument). However, **you do** have something to hide, your digital life is becoming more and more important every day. 
+
+So why should you allow people to openly, and knowingly violate your online privacy? Microsoft, Google, Meta, Twitter, and all of the organizations out there do not care about your best interest. They want to make money out of you, because you are the **product**. Not only are you profited off, but big companies that have vast influence want to put you in a [Filter Bubble](https://spreadprivacy.com/filter-bubble/), which is a very dangerous practice.
 
 These companies want to make a complete picture of who you are. [An analysis by MIT](http://news.mit.edu/2015/identify-from-credit-card-metadata-0129) shows that with small bits of obscure information, such as locations and dates of purchases, is able to 90 percent of 1.1 million users.
 
