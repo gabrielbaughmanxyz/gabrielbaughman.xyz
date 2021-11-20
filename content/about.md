@@ -15,3 +15,6 @@ I don't know if many people will see what I write, but I am not doing this hopin
 I have a passionate belief in online privacy. There will not be any advertisements, trackers, or invasive analytics on my site. 
 
 I do not require donations, but I will be grateful to any that comes my way.
+
+# Credit
+Site Icon: Icon made by [FreePik](https://www.freepik.com) from [Flaticon](www.flaticon.com)
