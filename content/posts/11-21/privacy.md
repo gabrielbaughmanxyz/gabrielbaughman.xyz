@@ -1,8 +1,8 @@
 ---
-title: "Privacy"
+title: "The Right to Privacy"
 date: 2021-11-18T17:06:47-06:00
 author: "Gabriel"
-description: "Privacy is a fundemental right that needs to be preserved."
+description: "Privacy is a right."
 tags: ["Privacy"]
 ShowReadingTime: true
 ShowToc: true
@@ -19,8 +19,8 @@ draft: false
 
 People believe that online privacy doesn’t matter, unless you have something immoral to hide. This is called [Nothing To Hide Argument](https://en.wikipedia.org/wiki/Nothing_to_hide_argument). However, **you do** have something to hide, your digital life is becoming more and more important every day. 
 
-So why should you allow people to openly, and knowingly violate your online privacy? Microsoft, Google, Meta, Twitter, and all of the organizations out there do not care about your best interest. They want to make money out of you, because you are the **product**. Not only are you profited off, but big companies that have vast influence want to put you in a [Filter Bubble](https://spreadprivacy.com/filter-bubble/), which is a very dangerous practice.
+So why should you allow people to openly, and knowingly violate your online privacy? Microsoft, Google, Meta, Twitter, and all of the organizations out there do not care about your best interest. They want to make money out of you, because you are the **product**. Not only are you profited off of, but big companies that have vast influence want to put you in a [Filter Bubble](https://spreadprivacy.com/filter-bubble/), which is a very dangerous practice.
 
-These companies want to make a complete picture of who you are. [An analysis by MIT](http://news.mit.edu/2015/identify-from-credit-card-metadata-0129) shows that with small bits of obscure information, such as locations and dates of purchases, is able to 90 percent of 1.1 million users.
+These companies want to make a complete picture of who you are. [An analysis by MIT](http://news.mit.edu/2015/identify-from-credit-card-metadata-0129) shows that with small bits of obscure information, such as locations and dates of purchases, is able to find 90 percent of 1.1 million users.
 
-Privacy is a **right** that should not have to proven to have. Allowing ourselves to become complete profiles in organization’s databases is what can make controlling organizations even more of a threat.
+Privacy is a **right** that should not have to proven to have. Allowing ourselves to become complete profiles in an organization’s database is something that we shoulf not let happen.
