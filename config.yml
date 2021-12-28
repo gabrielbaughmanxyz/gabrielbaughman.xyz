@@ -55,7 +55,7 @@ params:
 
   # profile-mode
   profileMode:
-    enabled: true # needs to be explicitly set
+    enabled: false # needs to be explicitly set
     title: gabrielbaughman.xyz
     subtitle: "Welcome to my site. I make posts about anything I find worth, or needs talking about."
     imageUrl: "../images/pfp.jpg"
@@ -71,7 +71,7 @@ params:
   # home-info mode
   homeInfoParams:
     Title: "Home Of gabrielbaughman.xyz"
-    Content: "I make posts about anything I find worth, or needs talking about."
+    Content: "All governments suffer a recurring problem: Power attracts pathological personalities. It is not that power corrupts but that is is magnetic to the corruptible. Such people have a tendency to become drunk on violence, a condition to which they are quickly addicted. - Missionaria Protectiva From Dune"
 
   socialIcons:
 #    - name: twitter
@@ -123,13 +123,13 @@ menu:
       name: tags
       url: /tags/
       weight: 20
-    - identifier: about
-      name: about
-      url: /about/
-      weight: 30
     - identifier: site
       name: donate
       url: /donate/
+      weight: 30
+    - identifier: about
+      name: about
+      url: /about/
       weight: 40
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 # pygmentsUseClasses: true
