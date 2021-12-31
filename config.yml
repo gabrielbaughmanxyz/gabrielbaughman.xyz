@@ -55,9 +55,9 @@ params:
 
   # profile-mode
   profileMode:
-    enabled: false # needs to be explicitly set
+    enabled: true # needs to be explicitly set
     title: gabrielbaughman.xyz
-    subtitle: "Welcome to my site. I make posts about anything I find worth, or needs talking about."
+    subtitle: "\"The unexamined life is not worth living.\" - Socrates"
     imageUrl: "../images/pfp.jpg"
     imageWidth: 360
     imageHeight: 360
