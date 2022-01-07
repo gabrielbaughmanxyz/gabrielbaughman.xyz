@@ -55,7 +55,7 @@ params:
 
   # profile-mode
   profileMode:
-    enabled: true # needs to be explicitly set
+    enabled: false # needs to be explicitly set
     title: gabrielbaughman.xyz
     subtitle: "\"The unexamined life is not worth living.\" - Socrates"
     imageUrl: "../images/pfp.jpg"
@@ -70,8 +70,8 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "Home Of gabrielbaughman.xyz"
-    Content: "All governments suffer a recurring problem: Power attracts pathological personalities. It is not that power corrupts but that is is magnetic to the corruptible. Such people have a tendency to become drunk on violence, a condition to which they are quickly addicted. - Missionaria Protectiva From Dune"
+    Title: "gabrielbaughman.xyz"
+    Content: "Posting for the betterment of humanity."
 
   socialIcons:
 #    - name: twitter
