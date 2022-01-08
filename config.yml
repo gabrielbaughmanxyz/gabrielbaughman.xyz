@@ -70,8 +70,8 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "gabrielbaughman.xyz"
-    Content: "Posting for the betterment of humanity."
+    Title: "gabrielbaughman"
+    Content: "Posting knowledge for people"
 
   socialIcons:
 #    - name: twitter
